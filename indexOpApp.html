@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Sistema de Gestión Interna de la Policía Local de San Cristóbal de la Laguna" />
+    <meta name="author" content="paherosm@lalaguna.es" />
+    <title>Policía Local de La Laguna</title>
+    <link rel="stylesheet" href="dist/css/opApp.css">
+    <script type="text/javascript" src="plugins/opGrid/opGrid.class.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id = "container" class="container">
+        <div class="header">
+            <button class="xs-button">
+                <i class='bx bx-menu'></i>
+            </button>
+            <span class="header-logo"> Canary Cop </span>
+            <div class="header-links">
+                <a href="#">Confiig</a>
+                <div class="verticalSubMenu disabled">
+                    dark mode
+                </div>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+            <div class="aside">
+                <ul>
+                    <li>
+                        <a class="aside-link" href="index.html">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard
+                        </a>
+                    </li>
+                    <li><a class="aside-link" href="#">Plantilla</a></li>
+                    <li><a class="aside-link" href="layout-static.html">Datos Maestros</a></li>
+                    <li><a class="aside-link" href="layout-sidenav-light.html">Datos RPT</a></li>
+                </ul>   
+                <span class="aside-link">Servicios Extraordinarios</span>
+                <a class="aside-link" href="samaritano.html">Diario</a>
+                <a class="aside-link" href="#">Seleccion</a>
+                <div class="footer">
+                    <div class="footer-text">
+                        <a href="#">Privacy Policy</a>
+                        &middot;
+                        <a href="#">Terms &amp; Conditions</a>
+                    </div>
+                </div>                
+            </div>
+            <div class="main">
+                <div class="nav">
+                    <a href="#" class="nav-link">item1 </a>
+                    <a href="#" class="nav-link">item2 </a>
+                    <a href="#" class="nav-link">item3 </a>
+                </div>
+                <input type="text" class="input">
+                <input type="button" class="btn" value="input">
+                <button>Button</button>
+                <a class="btn">Button</a>
+
+                <div class="card w5 mt1">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eveniet dicta placeat molestiae dolor itaque deserunt laboriosam iusto officia, alias quod sunt, repellat veniam inventore qui cum doloribus sed consequatur.</div>
+                </div>
+
+                <div class="panel bottom danger">
+                    Panel
+                </div>
+                <div class="footer">
+                    <div class="footer-text">
+                        <a href="#">Privacy Policy</a>
+                        &middot;
+                        <a href="#">Terms &amp; Conditions</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!-- <div id="form" style="width: 700px; min-height: 800px; position: fixed; top: 10%;left: 30%; background-color: #EEE; padding: 20px; border: 1px solid #ccc; box-shadow: 2px 2px 6px #666,-2px -2px 6px #666;"> -->
+    <div id="form" class="modal">
+        test de formulario
+        <a href="#" style="float: right; font-size: 1.1em; color: red; text-decoration: none;" onclick="const form = document.getElementById('form'); form.style.display = 'none'">X</a>
+        <div id="innerForm" style="display: flex; flex-wrap: wrap; width: 700px;">
+            <div style="width: 50%">
+                <label class="col-2"></label>
+                <div class="col-10">
+                    <input id="nip" name="nip" placeholder="NIP o NIPS" type="text" class="form-control"
+                        required="required">
+                </div>
+    
+                <label class="col-2 col-form-label" for="fecha">Fecha:</label>
+                <div class="col-10">
+                    <input id="fecha" name="fecha" type="date" class="form-control">
+                </div>
+    
+                <label for="turno" class="col-2 col-form-label">Turno</label>
+                <div class="col-10">
+                    <select id="turno" name="turno" class="form-control">
+
+                    </select>
+                </div>
+    
+                <label for="exp" class="col-2 col-form-label">Expediente</label>
+                <div class="col-10">
+                    <select id="exp" name="exp" class="form-control">
+                        <option value=""></option>
+                        <option value="OPERATIVA">OPERATIVA</option>
+                        <option value="ATESTADOS">ATESTADOS</option>
+                        <option value="URSI">URSI</option>
+                        <option value="G Y P">G Y P</option>
+                        <option value="USP-GARA">USP-GARA</option>
+                        <option value="LOGÍSTICA">LOGÍSTICA</option>
+                        <option value="ALCALDIA">ALCALDIA</option>
+                        <option value="SAC">SAC</option>
+                        <option value="JS">JS</option>
+                        <option value="GRAN GALA-MACEROS">GRAN GALA-MACEROS</option>
+                    </select>
+                </div>
+    
+                <label for="asiste" class="col-2 col-form-label">Asiste</label>
+                <div class="col-10">
+                    <select id="asiste" name="asiste" class="form-control">
+                        <option value=""></option>
+                        <option value="A">Asiste</option>
+                        <option value="R">Rechaza</option>
+                        <option value="I">No Comparece</option>
+                    </select>
+                </div>
+    
+                <label for="hora_entrada" class="col-6 col-form-label">Hora Entrada</label>
+                <div class="col-10">
+                    <input id="hora_entrada" name="hora_entrada" type="time" class="form-control">
+                </div>
+    
+                <label for="hora_salida" class="col-6 col-form-label">Hora Salida</label>
+                <div class="col-10">
+                    <input id="hora_salida" name="hora_salida" type="time" class="form-control">
+                </div>
+            </div>
+            <div style="width: 50%">
+                <div class="col-10" >
+                    <input id="tls" type="checkbox"> TLS         <br>
+                    <input id="na" type="checkbox"> No Asignado  <br>
+                    <input id="uh" type="checkbox"> Ultima Hora  <br>
+                    <input id="ju" type="checkbox"> Justificado  <br>
+                    <input id="js" type="checkbox"> Jefe Servicio<br>
+                    <input id="esp" type="checkbox"> Especialidad<br>
+                    <input id="ID" type="hidden" value="">
+                </div>
+                <div class="col-10">
+                    <label for="hora_salida" class="col-6 col-form-label">CT:</label>
+                     <input id="ct" type="text" class="form-control" placeholder="Otro Agente fecha original turno original">
+                     <label for="hora_salida" class="col-10 col-form-label">Asignado por/ Sustituye a:</label> 
+                    <input id="apsa" type="text" class="form-control">
+                    <label for="hora_salida" class="col-6 col-form-label">Acto o Evento:</label> 
+                    <input id="ae" type="text" class="form-control">
+                    <label for="hora_salida" class="col-6 col-form-label">Observaciones:</label>
+                    <textarea id="obs" class="form-control" rows=10></textarea>
+                </div>
+            
+    
+            </div>
+            <div class="col-11" style="margin-top: 30px;">
+                <button name="btnAdd" id="btnAdd" type="submit" class="btn btn-primary"></button>
+                <button name="btnCancel" id="cancel" class="btn btn-danger" onclick="const form = document.getElementById('form'); form.style.display = 'none'">Cancel</button>
+                <span style="float: right"><input id="revisado" type="checkbox"> Revisado</span>
+            </div>
+            <audio id="player" controls style="display: none">
+                <source src="https://sounds-mp3.com/mp3/0011291.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+    <script src="dist/js/samaritanoGrid.js"></script>
+    <script src="dist/js/samaritanoController.js"></script>    
+    <script src="dist/js/samaritanoScript.js"></script>
+</body>
+</html>
