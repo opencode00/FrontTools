@@ -490,25 +490,13 @@ body.dark .panel{
 	
 }
 
-.verticalSubMenu .dark{
+.dark .verticalSubMenu{
 	background-color: var(--dark);
 	color: var(--white);
+	border: 1px solid var(--light);
 }
 
 
-/*modal*/
-.modal::before{
-	background-color: rgba(0,0,0,0.8);
-}
-.modal{
-	position: fixed;
-	top: 50vh;
-	left: 50vw;
-	background-color: var(--white);
-	color: var(--black);
-	padding: 8px;
-	border: 1px solid #222;
-}
 /* ====================
 	* VFX *
 ==================== */
