@@ -171,7 +171,6 @@ body.dark .header{
 }
 
 .nav{
-	/* grid-area: nav; */
 	display: flex;
 	justify-content: center;
 	align-content: center;
@@ -189,6 +188,7 @@ body.dark .header{
 	flex-direction: column;
 	background-color: var(--light);
 	box-shadow: 4px -1px 8px var(--default-shadow);
+	padding: 1em;
 	transition: 0.3s all ease;
 }
 
@@ -438,7 +438,7 @@ body.dark .btn:hover{
 
 .card-header{
 	display: flex;
-	padding: 0.5em;
+	padding: 0.7em;
 	background-color: rgba(0,0,0,0.1);
 	border-bottom: var(--default-border);
 	align-items: center;
@@ -459,8 +459,8 @@ body.dark .card-header{
 }
 
 
-/*panel de alerta o notificaciones */
-.panel{
+/*notificaciones */
+.notification{
 	width: calc(98vw - var(--sidebar-width));
 	padding: 15px;
 	border-radius: 5px;
@@ -469,11 +469,11 @@ body.dark .card-header{
 	z-index:1;
 }
 
-body.dark .panel{
+body.dark .notification{
 	border: var(--dark-border);
 }
 
-.containerFull .main .panel{
+.containerFull .main .notification{
 	width: 98%;
 }
 
