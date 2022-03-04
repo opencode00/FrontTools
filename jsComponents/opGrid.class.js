@@ -10,24 +10,16 @@
  *      
  *      type: (string) tipo de dato a mostrar en la tabla
  *          field: Será un campo (key) dentro de data (array)
-<<<<<<< HEAD:jsCompenents/opGrid.class.js
- *          fieldGroup: (Array) Array de valores da data para mostrar juntos. Se juntan con joinGroup (P.D espacio).
-=======
  *          fieldGroup: (Array) Array de valores da data para mostrar juntos. 
  *                              Se imprimen con el caracter de option joinGroup (default: espacio).
->>>>>>> 0c3e1ca34078c6a7631df34dc63feba5f1eb7423:js/opGrid.class.js
  *          checkbox|boolean: Convierte los valores booleanos o 0 y 1 del campo dentro de data.
  *          html: define un valor html para enlaces, botones, etc.
  * 
  *      value:(string) valor segun el tipo:
  *          field: nombre de campo/s dentro de data
-<<<<<<< HEAD:jsCompenents/opGrid.class.js
- *          html: valor html que se quiera mostrar.Importante el atributo binded y bindedReplaceText
-=======
  *          fieldGroup: [array,de,campos]
  *          html: valor html que se quiera mostrar.
  *                Importante las options  bindValue y bindedReplaceText
->>>>>>> 0c3e1ca34078c6a7631df34dc63feba5f1eb7423:js/opGrid.class.js
  *                (EJ: `<button onclick="crudForm(-- bindedReplaceText--)">Editar</button>`,)
  *                NOTA: bindedReplaceText puede ser: 
  *                      - la propiedad (con el mismo nombre) del objeto de configuracion options
@@ -47,11 +39,7 @@
  *      trClass:    (string) (trClass) Clase Html de filas de datos.
  *      tdClass:    (string) (tdClass) Clase Html de columnas de datos.
  *      bindedReplaceText: (string) (%binded%) texto con el que se reeemplazará el valor de bindValue en las columnas definidas por el usuario.
-<<<<<<< HEAD:jsCompenents/opGrid.class.js
  *      groupJoin:  (string) (' ') Carcater de union para el tipo fieldGroup 
-=======
- *      groupJoin:  (string) (' ') Caracter de union para el tipo fieldGroup 
->>>>>>> 0c3e1ca34078c6a7631df34dc63feba5f1eb7423:js/opGrid.class.js
  *      bindValue: (string) ("ID) nombre del campo de data para enlazar con la API o la BBDD
  *      headerFixed: (bool) (true) fija la cabecera de la tabla
  *   }   
