@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{(Serebro.v2)}</title>
+    <style>
+        body{
+            background-image: radial-gradient(#AAA 1%, #222 99%);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+        }
+        
+        header{
+            border-bottom: 1px solid #222;
+            min-height: 80px;
+
+        }
+
+        #content{
+            display: flex;
+        }  
+
+        #left{
+            flex-grow: 1;
+            flex-basis:10%;
+        }
+
+        #center{
+            flex-grow: 2;
+            flex-basis:95%;
+        }
+
+        #right{
+            flex-grow: 1;
+            flex-basis:5%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        Esto es el header
+    </header>
+    <div id="content">
+        <section id="left">
+            Menu de la izquierda
+        </section>
+        <section id="center">
+            <input type="color">
+        </section>
+        <section id="right">
+            Menu de la derecha
+        </section>
+            
+        </div>
+    </div>
+</body>
+</html>
