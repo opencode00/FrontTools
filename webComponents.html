@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="cssComponents/opApp.css"/> 
+    <link rel="stylesheet" type="text/css" href="cssComponents/full.css"/> 
     <title>{(Serebro.v2)}</title>
     <style>
         body{
@@ -31,10 +31,17 @@
         </ui-celement>
         <menu-item>
             <a slot="menu">Menu Item</a>
-            <ul slot="submenu">
-                <li><a>Submenu1 </a></li>
-                <li><a>Submenu2</a></li>
-            </ul> 
+            <div slot="submenu" style="background-color: white">
+                <a>Submenu1 </a><br/>
+                <a>Submenu2</a>
+            </div> 
+        </menu-item>
+        <menu-item>
+            <a slot="menu">Menu Item2</a>
+            <div slot="submenu" style="background-color: white">
+                <a>Submenu1 </a><br/>
+                <a>Submenu2</a>
+            </div> 
         </menu-item>
     </div>
     <ui-card style="width: 20em; margin-left: 4em; margin-top: 2em" class="" >

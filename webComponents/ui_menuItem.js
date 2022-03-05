@@ -1,11 +1,11 @@
 /**
-    <ui-menuItem type="">
-        <a slot="menu" >Menu Item name</a>
-        <ul slot="submenu">
-            <li> submenu item 1</li>
-            <li> submenu item 2</li>
-        </ul>
-    </ui-menuItem>
+    <menu-item>
+        <a slot="menu">Menu Item</a>
+        <div slot="submenu" style="background-color: white">
+            <a>Submenu1 </a><br/>
+            <a>Submenu2</a>
+        </div> 
+    </menu-item>
  */
 
     const menuItemtpl = document.createElement('template');
@@ -14,21 +14,15 @@
         .disabled{
             display:none;
         }
-        .element{
-            display: inline;
+        #menu-item{
             position: relative;
         }
         #submenu{
             position: absolute;
         }
-        #submenu-item > ul > li {
-            background-color: yellow;
-            margin: 0;
-            list-style: none;
-        }
         </style>
-        
-        <div class="element">
+
+        <span id="menu-item">
             <slot id="menu" name="menu"></slot>
             <div id="submenu">
                 <slot id="submenu_item" name="submenu"></slot>
@@ -47,21 +41,11 @@
        
         connectedCallback(){
             this.shadowRoot.querySelector('#submenu').classList.add('disabled');
-            // this.update();
         }
-    
-        // static get observedAttributes() {
-        //     // return ['superior','inferior','color']
-        // } 
-        
-        // attributeChangedCallback(name, oldVal, newVal){
-        //     this.update()
-        // }
     
         update(){
             const menu = this.shadowRoot.querySelector('slot#menu');
             menu.addEventListener('click', ()=>{
-                console.log('ok')
                 this.shadowRoot.querySelector('#submenu').classList.toggle('disabled');
             });
 

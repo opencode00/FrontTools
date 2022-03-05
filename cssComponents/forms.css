@@ -1,0 +1,67 @@
+/* ====================
+	* FORMULARIOS *
+==================== */
+form * {
+	font-family: var(--fuente);
+}
+
+input, select  {
+	padding: 0.6em 0.4em;
+	border-radius: 5px;
+	border: var(--default-border);
+	transition: .3s ease all;
+}
+
+input:focus {
+	border: 1px solid var(--buttonBorderHover);
+	outline: none;
+}
+
+button, input[type="button"]  {
+	background-color: var(--default-bg);
+	padding: 0.5em 0.9em;
+	border-radius: 5px;
+	border: var(--default-border);
+	cursor: pointer;
+	transition: .3s ease all;
+}
+
+.btn, .button {
+	background-color: var(--default-bg);
+	color: var(--dark);
+	font-size: 1.2em;
+	display: inline-block;
+	padding: 0.3em 0.7em;
+	border-radius: 5px;
+	cursor: pointer;
+	border: var(--default-border);
+	text-decoration: none;
+	transition: .3s ease all;
+}
+
+button:hover, input[type="button"]:hover, .btn:hover, .button:hover {
+	/* background-color: var(--buttonBGHover); */
+	filter: contrast(2);
+	border: 1px solid var(--buttonBorderHover);
+	text-decoration: none;
+}
+
+body.dark .btn, body.dark .button, .btn .dark, .button .dark{
+	color: var(--black);
+}
+
+body.dark button:hover, 
+body.dark input[type="button"]:hover, 
+body.dark .btn:hover,
+.dark .btn:hover, .dark .button:hover
+{
+	/* background-color: var(--gray); */
+	/* filter:sepia(1); */
+	filter: contrast(2);
+}
+
+
+.form-row{
+	display: block;
+	margin-bottom: 0.3em;
+}

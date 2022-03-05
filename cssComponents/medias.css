@@ -1,0 +1,11 @@
+/* ==========================
+	* Dispositivos Móviles  *
+============================= */
+
+/* Tamaño Pequeño - Moviles */
+@media screen and (max-width: 576px) {
+	body{
+		font-size: 12px;
+	}
+}
+

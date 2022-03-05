@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import url('https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
@@ -17,11 +16,8 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 	* VARIABLES *
 ==================== */
 :root {
-	--fuente: 'Open Sans', sans-serif;
-	/* Layouts */
-	--nav-height: 40px; /*40px Si no tiene .nav eliminar la altura */
-	--sidebar-width: 250px;
-	/* Utils */
+	--fuente: "Roboto","Trebuchet MS", "Segoe UI" 
+	--fuente-consola: Consolas;
 	--minWidthPercent: 8.333%;
 	/*Formularios*/
 	--buttonBG: #c9c9c9;
@@ -47,8 +43,6 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 	--info: #0dcaf0;
 	--warning: #ffc107;
 	--danger: #dc3545;
-	--font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
   
 /* ====================
@@ -61,7 +55,6 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 }
 
 body {
-	background: var(--white);
 	font-family: var(--fuente);
 	font-size: 15px;
 	color: var(--black);
@@ -76,10 +69,10 @@ a{
 	text-decoration: none;
 }
 
-
 a:hover{
 	text-decoration: underline;
 }
+
 
 a:visited{
 	color: var(--black);
@@ -89,36 +82,18 @@ body.dark a{
 	color: var(--light);
 }
 
+.no_decoration:hover{
+	text-decoration: none;
+}
 p {
 	line-height: 27px;
 }
 
 img {
 	vertical-align: top;
-	width: 100%;
+	width: 100%; /* Se usa para que se adapte al tamaño de la capa que la contiene*/
+	height: 100%;
 }
-
-/* ====================
-	* POSICIONAMIENTO *
-==================== */
-.text-center {text-align: center;}
-.text-left {text-align: left;}
-.text-right {text-align: right;}
-.fleft {float: left;}
-.fright {float: right;}
-.clear {clear: both;}
-.bottom {position: absolute; bottom: 10px}
-.top {position: absolute; top: 10px}
-.flex { display: flex; } 
-.flex-column{ flex-direction: column;}
-.flex-right {justify-content: flex-end;}
-.flex-left {justify-content: flex-start;}
-.flex-center {justify-content: center;}
-.flex-between {justify-content: space-between;}
-.flex-around {justify-content: space-around;}
-.flex-top {align-items: top;}
-.flex-middle {align-items: center;}
-.flex-bottom {align-items: bottom;}
 
 /* ====================
 	* FUENTES *
@@ -212,7 +187,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .table tr,td{
 	padding: 4px;
-	
 }
 
 .table tr:nth-child(odd){
@@ -254,61 +228,44 @@ button, input[type="button"]  {
 	transition: .3s ease all;
 }
 
-.btn {
+.btn, .button {
 	background-color: var(--default-bg);
+	color: var(--dark);
+	font-size: 1.2em;
 	display: inline-block;
-	padding: 0.5em 0.9em;
+	padding: 0.3em 0.7em;
 	border-radius: 5px;
 	cursor: pointer;
 	border: var(--default-border);
+	text-decoration: none;
 	transition: .3s ease all;
 }
 
-button:hover, input[type="button"]:hover, .btn:hover {
+button:hover, input[type="button"]:hover, .btn:hover, .button:hover {
 	/* background-color: var(--buttonBGHover); */
 	filter: contrast(2);
 	border: 1px solid var(--buttonBorderHover);
 	text-decoration: none;
 }
 
-
-body.dark .btn{
+body.dark .btn, body.dark .button, .btn .dark, .button .dark{
 	color: var(--black);
 }
 
 body.dark button:hover, 
 body.dark input[type="button"]:hover, 
-body.dark .btn:hover{
+body.dark .btn:hover,
+.dark .btn:hover, .dark .button:hover
+{
 	/* background-color: var(--gray); */
 	/* filter:sepia(1); */
 	filter: contrast(2);
 }
 
+
 .form-row{
 	display: block;
 	margin-bottom: 0.3em;
-}
-
-/* ====================
-	* COMPONENTES *
-==================== */
-
-/* Sub Menu vertical */
-.verticalSubMenu{
-	position: absolute;
-	border-radius: 4px;
-	background-color: var(--white);
-	color: var(--black);
-	padding: 8px;
-	margin-top: 5px;
-	border: 1px solid #222;
-	
-}
-
-.dark .verticalSubMenu{
-	background-color: var(--dark);
-	color: var(--white);
-	border: 1px solid var(--light);
 }
 
 
@@ -327,53 +284,9 @@ body.dark .btn:hover{
 	* Dispositivos Móviles  *
 ============================= */
 
-/* Tamaño Pequeño - Celulares */
+/* Tamaño Pequeño - Moviles */
 @media screen and (max-width: 576px) {
 	body{
-		font-size: 11px;
-	}
-	.container {
-		width: 100%;
-		margin: 0px auto;
-		overflow: hidden;
-		height: 100vh;
-		display: grid;
-		grid-template: 
-			"header" 60px
-			"aside"	 auto
-			"main"	 auto
-			"footer" 20px;
-	}
-	.nav{
-		justify-content: space-around;
-	}
-
-	.aside > ul {
-		padding: 0;
-	}
-
-	.aside > ul > li{
-		list-style-type: none;
-		text-align: center;
-		margin-bottom: 20px;
-	}
-
-	.aside > a, 
-	.aside > span,
-	.aside > p{
-		text-align: center;
-		margin-bottom: 20px;
-	}
-
-	.main{
-		padding: 0 10px;
-	}
-
-	.footer{
-		display: none;
-	}
-
-	.panel{
-		width: 96%;
+		font-size: 12px;
 	}
 }

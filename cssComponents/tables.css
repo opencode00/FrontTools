@@ -1,0 +1,27 @@
+/* ====================
+	* TABLAS *
+==================== */
+.table{
+	position: relative;
+}
+
+.table th{
+	padding: 4px;
+	background-color: var(--black);
+	color: var(--white);
+}
+
+.table tr,td{
+	padding: 4px;
+}
+
+.table tr:nth-child(odd){
+	background-color: rgba(210,210,200,0.8);
+}
+
+body.dark .table tr:nth-child(odd){
+	background-color: rgba(10,10,10,0.8);
+}
+.table.dark tr:nth-child(odd){
+	background-color: rgba(20,20,20,0.8);
+}
