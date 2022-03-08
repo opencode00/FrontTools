@@ -19,16 +19,15 @@
 </head>
 
 <body>
-    <div>
-
-    </div>
     <div style="display: flex; gap: 5px;;">
         <ui-melement style="font-size: 2em" superior="oc" inferior="drive" color="#ffcb00">
             <span slot="content">(Dr)</span>
         </ui-melement>
+        
         <ui-celement superior="oc" inferior="drive" color="#ffcb00" cross="false">
-        <span slot="content">(Dr)</span>
+            <span slot="content">(Dr)</span>
         </ui-celement>
+        
         <menu-item>
             <a slot="menu">Menu Item</a>
             <div slot="submenu" style="background-color: white">
@@ -43,6 +42,10 @@
                 <a>Submenu2</a>
             </div> 
         </menu-item>
+        
+        <input-search onkeyup="getData(this)">
+            <div slot="data"></div>
+        </input-search>
     </div>
     <ui-card style="width: 20em; margin-left: 4em; margin-top: 2em" class="" >
         <span slot="title">Primitiva</span>
@@ -67,7 +70,15 @@
     <script src="webComponents/ui_card.js"></script>
     <script src="webComponents/ui_notification.js"></script>
     <script src="webComponents/ui_modalbox.js"></script>
-    <script src="webComponents/ui_menuItem.js"></script>
+    <script src="webComponents/menu_Item.js"></script>
+    <script src="webComponents/input_search.js"></script>
+    <script>
+        function getData(el){
+            const val = el.shadowRoot.querySelector('input').value
+            el.shadowRoot.querySelector('#results').innerHTML += '<a href="/ubicacion/cancion1">cancion1</a><br>'
+
+        }
+    </script>
 </body>
 
 </html>

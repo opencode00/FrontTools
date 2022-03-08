@@ -23,9 +23,9 @@
         #modalbox {
             /*width: fit-content;*/
             height: fit-content;
-            box-shadow: rgba(0,0,0,0.4);
             max-height: 80vh;
             max-width: 90vw;
+            box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
         }
         
         #modalbox-title{
