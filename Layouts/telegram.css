@@ -69,6 +69,11 @@ footer {
 }
 
 @media screen and (max-width: 1090px) {
+    #main{
+        max-width: 100%;
+        width: 100%;
+    }
+    
     #izquierda{
         background-color: lightblue;
         width: 6rem;
@@ -80,6 +85,10 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
+    #main{
+        max-width: 100%;
+        width: 100%;
+    }
     #izquierda{
         background-color: lightsteelblue;
         width: 2rem;
