@@ -1,0 +1,89 @@
+:root{
+    --height-header: 3.5rem;
+    --height-void: 5rem;
+}
+*{
+    margin:0;
+    padding:0;
+}
+
+#main{
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+header{
+    background-color: gray;
+    height: var(--height-header);
+
+}
+
+#container{
+    background-color: whitesmoke;
+    display: flex;
+}
+
+#izquierda{
+    display: block;
+    background-color: blueviolet;
+    max-width: 30vw;
+    min-width: 4rem;
+    overflow: auto;
+    resize: horizontal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+#content{
+    background-color: indigo;
+    width: 100%;
+    min-height: calc(100vh - var(--height-void));
+    
+}
+
+#derecha{
+    background-color: magenta;
+    min-height: calc(100vh - var(--height-void));
+}
+
+.derecha_out{
+    width: 0;
+    transform-origin: 100% 0% 0;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in;
+}
+
+.derecha_in{
+    width: 30vw;
+    transform-origin: 100% 0% 0;
+    transform: scaleX(-25rem);
+    transition: all 0.5s ease-out;
+}
+
+footer {
+    background-color: gray;
+    height: 3.5rem;
+}
+
+@media screen and (max-width: 1090px) {
+    #izquierda{
+        background-color: lightblue;
+        width: 6rem;
+    }
+    #derecha{
+        right: 3rem;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    #izquierda{
+        background-color: lightsteelblue;
+        width: 2rem;
+    }
+    #derecha{
+        right: 1.7rem;
+    }
+}

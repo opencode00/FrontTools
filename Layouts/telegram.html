@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../cssComponents/telegram.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <header>
+            <button onclick="iToggle()">REv </button>
+            <div style="width: 100%; text-align: right;">
+                <button onclick="dReveal()">REv </button>
+            </div>
+        </header>
+        <div id="container">
+            <section id="izquierda" style="display: block">
+                izquierda con un menu muy ancho
+            </section>
+            <div id="content">
+                centro  
+            </div>
+            <aside id="derecha" class="derecha_out">
+                <button onclick="dHide()">X</button>
+                derecha
+            </aside>
+
+        </div>
+        <!-- <footer>
+            footer
+        </footer> -->
+    </div>
+    <script>
+        function dReveal(){
+            document.getElementById('derecha').classList.add('derecha_in');
+            document.getElementById('derecha').classList.remove('derecha_out');
+
+        }
+
+        function dHide(){
+            document.getElementById('derecha').classList.remove('derecha_in');
+            document.getElementById('derecha').classList.add('derecha_out');
+        }
+
+        function iToggle(){
+            izq = document.getElementById('izquierda');
+            if (izq.style.display == 'block') izq.style.display = 'none';
+            else izq.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
