@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
 
@@ -19,32 +18,38 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 	--fuente: "Roboto","Trebuchet MS", "Segoe UI" 
 	--fuente-consola: Consolas;
 	--minWidthPercent: 8.333%;
-	/*Formularios*/
-	--buttonBG: #c9c9c9;
-	--buttonBGHover: #b9b9b9;
-	--buttonBorderHover: #222;
-	/* Colors */
-	--default-bg: rgba(221,221,221,0.8);
-	--default-border:  1px solid rgba(0,0,0,0.4);
-	--default-shadow: rgba(0,0,0,0.4);
-
-	--dark-bg: rgba(221,221,211,0.8);
-	--dark-border:  1px solid rgba(250,250,250,0.2);
-	--dark-shadow: rgba(0,0,0,0.8);
-
-	--white: #fff;
+    
+    /* Basic Colors */
+    --white: #fff;
 	--light: #f8f9fa;
 	--gray: #6c757d;
 	--gray-dark: #343a40;
 	--dark: #212529;
 	--black: #111111;
+
+    /* Predefinidos  */
 	--primary: #0d6efd;
 	--success: #198754;
 	--info: #0dcaf0;
 	--warning: #ffc107;
-	--danger: #dc3545;
+    --danger: #dc3545;
+    
+    /* Light theme */
+    --default-bg: rgba(221,221,221,0.8);
+	--default-border:  1px solid rgba(0,0,0,0.4);
+	--default-shadow: rgba(0,0,0,0.4);
+    
+    /* Dark Theme */
+	--dark-bg: rgba(221,221,211,0.8);
+	--dark-border:  1px solid rgba(250,250,250,0.2);
+	--dark-shadow: rgba(0,0,0,0.8);
+
+    /*Formularios*/
+	--buttonBG: #c9c9c9;
+	--buttonBGHover: #b9b9b9;
+	--buttonBorderHover: #222;
 }
-  
+
 /* ====================
 * ESTILOS GENERALES *
 ==================== */
@@ -54,14 +59,11 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
   box-sizing: border-box;
 }
 
-body {
-	font-family: var(--fuente);
-	font-size: 15px;
-	color: var(--black);
+body a{
+	color: var(--light);
 }
 
-body.dark{
-	background: var(--dark);
+body.dark a{
 	color: var(--light);
 }
 
@@ -73,18 +75,15 @@ a:hover{
 	text-decoration: underline;
 }
 
-
 a:visited{
 	color: var(--black);
 }
 
-body.dark a{
+a.dark, body.dark a{
 	color: var(--light);
 }
 
-.no_decoration:hover{
-	text-decoration: none;
-}
+
 p {
 	line-height: 27px;
 }
@@ -95,17 +94,22 @@ img {
 	height: 100%;
 }
 
-/* ====================
-	* FUENTES *
-==================== */
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
 }
 
 /* ====================
-	* Tamaños y Medidas *
+	* Utils *
 ==================== */
+.disabled{ 	display: none; }
+.primary  {background-color: var(--primary);}
+.danger { background-color: var(--danger); color: #fff;}
+.warning { background-color: var(--warning);}
+.info  { background-color: var(--info);}
+.success { background-color: var(--success);}
 
+
+/* Anchos */
 .w1  { width: var(--minWidthPercent);}
 .w2  { width: calc(var(--minWidthPercent)*2);}
 .w3  { width: calc(var(--minWidthPercent)*3);}
@@ -120,6 +124,7 @@ h1, h2, h3, h4, h5, h6 {
 .w12 { width: calc(var(--minWidthPercent)*12);}
 .wauto {width: auto;}
 
+/* Margin top */
 .mt1 { margin-top:  0.2em}
 .mt2 { margin-top:  calc(0.2em*2);}
 .mt3 { margin-top:  calc(0.2em*3);}
@@ -133,6 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 .mt11 { margin-top: calc(0.2em*11);}
 .mt12 { margin-top: calc(0.2em*12);}
 
+/* Margin Bottom */
 .mb1 {  margin-bottom: 0.2em}
 .mb2 {  margin-bottom: calc(0.2em*2);}
 .mb3 {  margin-bottom: calc(0.2em*3);}
@@ -146,6 +152,7 @@ h1, h2, h3, h4, h5, h6 {
 .mb11 { margin-bottom: calc(0.2em*11);}
 .mb12 { margin-bottom: calc(0.2em*12);}
 
+/* Margin Left */
 .ml1 {  margin-left: 0.2em}
 .ml2 {  margin-left: calc(0.2em*2);}
 .ml3 {  margin-left: calc(0.2em*3);}
@@ -159,6 +166,7 @@ h1, h2, h3, h4, h5, h6 {
 .ml11 { margin-left: calc(0.2em*11);}
 .ml12 { margin-left: calc(0.2em*12);}
 
+/* Margin Right */
 .mr1 {  margin-right: 0.2em}
 .mr2 {  margin-right: calc(0.2em*2);}
 .mr3 {  margin-right: calc(0.2em*3);}
@@ -170,37 +178,7 @@ h1, h2, h3, h4, h5, h6 {
 .mr9 {  margin-right: calc(0.2em*9);}
 .mr10 { margin-right: calc(0.2em*10);}
 .mr11 { margin-right: calc(0.2em*11);}
-.mr12 { margin-right: calc(0.2em*12);}
-
-/* ====================
-	* TABLAS *
-==================== */
-.table{
-	position: relative;
-}
-
-.table th{
-	padding: 4px;
-	background-color: var(--black);
-	color: var(--white);
-}
-
-.table tr,td{
-	padding: 4px;
-}
-
-.table tr:nth-child(odd){
-	background-color: rgba(210,210,200,0.8);
-}
-
-body.dark .table tr:nth-child(odd){
-	background-color: rgba(10,10,10,0.8);
-}
-.table.dark tr:nth-child(odd){
-	background-color: rgba(20,20,20,0.8);
-}
-
-/* ====================
+.mr12 { margin-right: calc(0.2em*12);}/* ====================
 	* FORMULARIOS *
 ==================== */
 form * {
@@ -266,21 +244,253 @@ body.dark .btn:hover,
 .form-row{
 	display: block;
 	margin-bottom: 0.3em;
+}@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+
+/* ====================
+	* CONFIGURACION *
+==================== */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+/* ====================
+	* VARIABLES *
+==================== */
+:root {
+	--fuente: "Roboto","Trebuchet MS", "Segoe UI" 
+	--fuente-consola: Consolas;
+	--minWidthPercent: 8.333%;
+    
+    /* Basic Colors */
+    --white: #fff;
+	--light: #f8f9fa;
+	--gray: #6c757d;
+	--gray-dark: #343a40;
+	--dark: #212529;
+	--black: #111111;
+
+    /* Predefinidos  */
+	--primary: #0d6efd;
+	--success: #198754;
+	--info: #0dcaf0;
+	--warning: #ffc107;
+    --danger: #dc3545;
+    
+    /* Light theme */
+    --default-bg: rgba(221,221,221,0.8);
+	--default-border:  1px solid rgba(0,0,0,0.4);
+	--default-shadow: rgba(0,0,0,0.4);
+    
+    /* Dark Theme */
+	--dark-bg: rgba(221,221,211,0.8);
+	--dark-border:  1px solid rgba(250,250,250,0.2);
+	--dark-shadow: rgba(0,0,0,0.8);
+
+    /*Formularios*/
+	--buttonBG: #c9c9c9;
+	--buttonBGHover: #b9b9b9;
+	--buttonBorderHover: #222;
+}
+
+/* ====================
+* ESTILOS GENERALES *
+==================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body a{
+	color: var(--light);
+}
+
+body.dark a{
+	color: var(--light);
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+a:visited{
+	color: var(--black);
+}
+
+a.dark, body.dark a{
+	color: var(--light);
 }
 
 
+p {
+	line-height: 27px;
+}
+
+img {
+	vertical-align: top;
+	width: 100%; /* Se usa para que se adapte al tamaño de la capa que la contiene*/
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+}
+
 /* ====================
-	* VFX *
+	* Utils *
 ==================== */
 .disabled{ 	display: none; }
-/* lista que no muestre el indice ese...*/
 .primary  {background-color: var(--primary);}
 .danger { background-color: var(--danger); color: #fff;}
 .warning { background-color: var(--warning);}
 .info  { background-color: var(--info);}
 .success { background-color: var(--success);}
 
-/* ==========================
+
+/* Anchos */
+.w1  { width: var(--minWidthPercent);}
+.w2  { width: calc(var(--minWidthPercent)*2);}
+.w3  { width: calc(var(--minWidthPercent)*3);}
+.w4  { width: calc(var(--minWidthPercent)*4);}
+.w5  { width: calc(var(--minWidthPercent)*5);}
+.w6  { width: calc(var(--minWidthPercent)*6);}
+.w7  { width: calc(var(--minWidthPercent)*7);}
+.w8  { width: calc(var(--minWidthPercent)*8);}
+.w9  { width: calc(var(--minWidthPercent)*9);}
+.w10 { width: calc(var(--minWidthPercent)*10);}
+.w11 { width: calc(var(--minWidthPercent)*11);}
+.w12 { width: calc(var(--minWidthPercent)*12);}
+.wauto {width: auto;}
+
+/* Margin top */
+.mt1 { margin-top:  0.2em}
+.mt2 { margin-top:  calc(0.2em*2);}
+.mt3 { margin-top:  calc(0.2em*3);}
+.mt4 { margin-top:  calc(0.2em*4);}
+.mt5 { margin-top:  calc(0.2em*5);}
+.mt6 { margin-top:  calc(0.2em*6);}
+.mt7 { margin-top:  calc(0.2em*7);}
+.mt8 { margin-top:  calc(0.2em*8);}
+.mt9 { margin-top:  calc(0.2em*9);}
+.mt10 { margin-top: calc(0.2em*10);}
+.mt11 { margin-top: calc(0.2em*11);}
+.mt12 { margin-top: calc(0.2em*12);}
+
+/* Margin Bottom */
+.mb1 {  margin-bottom: 0.2em}
+.mb2 {  margin-bottom: calc(0.2em*2);}
+.mb3 {  margin-bottom: calc(0.2em*3);}
+.mb4 {  margin-bottom: calc(0.2em*4);}
+.mb5 {  margin-bottom: calc(0.2em*5);}
+.mb6 {  margin-bottom: calc(0.2em*6);}
+.mb7 {  margin-bottom: calc(0.2em*7);}
+.mb8 {  margin-bottom: calc(0.2em*8);}
+.mb9 {  margin-bottom: calc(0.2em*9);}
+.mb10 { margin-bottom: calc(0.2em*10);}
+.mb11 { margin-bottom: calc(0.2em*11);}
+.mb12 { margin-bottom: calc(0.2em*12);}
+
+/* Margin Left */
+.ml1 {  margin-left: 0.2em}
+.ml2 {  margin-left: calc(0.2em*2);}
+.ml3 {  margin-left: calc(0.2em*3);}
+.ml4 {  margin-left: calc(0.2em*4);}
+.ml5 {  margin-left: calc(0.2em*5);}
+.ml6 {  margin-left: calc(0.2em*6);}
+.ml7 {  margin-left: calc(0.2em*7);}
+.ml8 {  margin-left: calc(0.2em*8);}
+.ml9 {  margin-left: calc(0.2em*9);}
+.ml10 { margin-left: calc(0.2em*10);}
+.ml11 { margin-left: calc(0.2em*11);}
+.ml12 { margin-left: calc(0.2em*12);}
+
+/* Margin Right */
+.mr1 {  margin-right: 0.2em}
+.mr2 {  margin-right: calc(0.2em*2);}
+.mr3 {  margin-right: calc(0.2em*3);}
+.mr4 {  margin-right: calc(0.2em*4);}
+.mr5 {  margin-right: calc(0.2em*5);}
+.mr6 {  margin-right: calc(0.2em*6);}
+.mr7 {  margin-right: calc(0.2em*7);}
+.mr8 {  margin-right: calc(0.2em*8);}
+.mr9 {  margin-right: calc(0.2em*9);}
+.mr10 { margin-right: calc(0.2em*10);}
+.mr11 { margin-right: calc(0.2em*11);}
+.mr12 { margin-right: calc(0.2em*12);}/* ====================
+	* FORMULARIOS *
+==================== */
+form * {
+	font-family: var(--fuente);
+}
+
+input, select  {
+	padding: 0.6em 0.4em;
+	border-radius: 5px;
+	border: var(--default-border);
+	transition: .3s ease all;
+}
+
+input:focus {
+	border: 1px solid var(--buttonBorderHover);
+	outline: none;
+}
+
+button, input[type="button"]  {
+	background-color: var(--default-bg);
+	padding: 0.5em 0.9em;
+	border-radius: 5px;
+	border: var(--default-border);
+	cursor: pointer;
+	transition: .3s ease all;
+}
+
+.btn, .button {
+	background-color: var(--default-bg);
+	color: var(--dark);
+	font-size: 1.2em;
+	display: inline-block;
+	padding: 0.3em 0.7em;
+	border-radius: 5px;
+	cursor: pointer;
+	border: var(--default-border);
+	text-decoration: none;
+	transition: .3s ease all;
+}
+
+button:hover, input[type="button"]:hover, .btn:hover, .button:hover {
+	/* background-color: var(--buttonBGHover); */
+	filter: contrast(2);
+	border: 1px solid var(--buttonBorderHover);
+	text-decoration: none;
+}
+
+body.dark .btn, body.dark .button, .btn .dark, .button .dark{
+	color: var(--black);
+}
+
+body.dark button:hover, 
+body.dark input[type="button"]:hover, 
+body.dark .btn:hover,
+.dark .btn:hover, .dark .button:hover
+{
+	/* background-color: var(--gray); */
+	/* filter:sepia(1); */
+	filter: contrast(2);
+}
+
+
+.form-row{
+	display: block;
+	margin-bottom: 0.3em;
+}/* ==========================
 	* Dispositivos Móviles  *
 ============================= */
 
@@ -289,4 +499,69 @@ body.dark .btn:hover,
 	body{
 		font-size: 12px;
 	}
+}
+
+/* ====================
+	* TABLAS *
+==================== */
+.table{
+	position: relative;
+}
+
+.table th{
+	padding: 4px;
+	background-color: var(--black);
+	color: var(--white);
+}
+
+.table tr,td{
+	padding: 4px;
+}
+
+.table tr:nth-child(odd){
+	background-color: rgba(210,210,200,0.8);
+}
+
+body.dark .table tr:nth-child(odd){
+	background-color: rgba(10,10,10,0.8);
+}
+.table.dark tr:nth-child(odd){
+	background-color: rgba(20,20,20,0.8);
+}/* ==========================
+	* Dispositivos Móviles  *
+============================= */
+
+/* Tamaño Pequeño - Moviles */
+@media screen and (max-width: 576px) {
+	body{
+		font-size: 12px;
+	}
+}
+
+/* ====================
+	* TABLAS *
+==================== */
+.table{
+	position: relative;
+}
+
+.table th{
+	padding: 4px;
+	background-color: var(--black);
+	color: var(--white);
+}
+
+.table tr,td{
+	padding: 4px;
+}
+
+.table tr:nth-child(odd){
+	background-color: rgba(210,210,200,0.8);
+}
+
+body.dark .table tr:nth-child(odd){
+	background-color: rgba(10,10,10,0.8);
+}
+.table.dark tr:nth-child(odd){
+	background-color: rgba(20,20,20,0.8);
 }
