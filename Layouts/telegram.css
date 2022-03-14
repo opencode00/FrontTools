@@ -1,5 +1,4 @@
 :root{
-    --height-header: 3.5rem;
     --height-void: 5rem;
 }
 
@@ -15,21 +14,20 @@
     margin: 0 auto;
 }
 header{
-    background-color: gray;
-    height: var(--height-header);
+    /* height: var(--height-header); */
+    height: max-content;
 
 }
 
 #container{
-    background-color: whitesmoke;
     display: flex;
 }
 
 #izquierda{
     display: block;
-    background-color: blueviolet;
     max-width: 30vw;
     min-width: 4rem;
+    width: 8rem;
     overflow: auto;
     resize: horizontal;
     text-overflow: ellipsis;
@@ -38,14 +36,12 @@ header{
 }
 
 #content{
-    background-color: indigo;
-    width: 100%;
+    width: max(100%,100vw);
     min-height: calc(100vh - var(--height-void));
     
 }
 
 #derecha{
-    background-color: magenta;
     min-height: calc(100vh - var(--height-void));
 }
 
@@ -64,7 +60,6 @@ header{
 }
 
 footer {
-    background-color: gray;
     height: 3.5rem;
 }
 
@@ -84,7 +79,7 @@ footer {
     
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
     #main{
         max-width: 100%;
         width: 100%;
