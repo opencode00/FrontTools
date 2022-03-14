@@ -1,10 +1,5 @@
 :root{
-    --height-void: 5rem;
-}
-
-*{
-    margin:0;
-    padding:0;
+    --height-void: 6rem;
 }
 
 #main{
@@ -13,10 +8,10 @@
     max-width: 90%;
     margin: 0 auto;
 }
+
 header{
     /* height: var(--height-header); */
     height: max-content;
-
 }
 
 #container{
@@ -26,13 +21,14 @@ header{
 #izquierda{
     display: block;
     max-width: 30vw;
-    min-width: 4rem;
-    width: 8rem;
+    min-width: 10vw;
+    width: 10vw;
     overflow: auto;
     resize: horizontal;
     text-overflow: ellipsis;
     white-space: nowrap;
     scrollbar-width: none;
+    padding: 0.5rem 0.8rem 0 0;
 }
 
 #content{
@@ -53,7 +49,7 @@ header{
 }
 
 .derecha_in{
-    width: 30vw;
+    width: 20vw;
     transform-origin: 100% 0% 0;
     transform: scaleX(-25rem);
     transition: all 0.5s ease-out;
@@ -63,32 +59,40 @@ footer {
     height: 3.5rem;
 }
 
+/* Tablets */
 @media screen and (max-width: 1090px) {
     #main{
         max-width: 100%;
         width: 100%;
     }
-    
     #izquierda{
-        background-color: lightblue;
-        width: 6rem;
+        display: none;
+        width: 40vw;
     }
     #derecha{
-        right: 3rem;
+        right: 1.7rem;
     }
+    .derecha_in{
+        width: 50vw;
+    }
+
     
 }
 
+/* Moviles */
 @media screen and (max-width: 700px) {
     #main{
         max-width: 100%;
         width: 100%;
     }
     #izquierda{
-        background-color: lightsteelblue;
-        width: 2rem;
+        display: none;
+        width: 40vw;
     }
     #derecha{
         right: 1.7rem;
+    }
+    .derecha_in{
+        width: 50vw;
     }
 }
